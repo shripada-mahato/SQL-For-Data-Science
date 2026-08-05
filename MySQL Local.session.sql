@@ -1,1 +1,1 @@
-SHOW databases;
+DESC employeephase1;
