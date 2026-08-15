@@ -1,5 +1,23 @@
-<<<<<<< HEAD
-Your local changes are here
-=======
-The changes from GitHub are here
->>>>>>> origin/main
+SHOW DATABASES;
+CREATE DATABASE company;
+USE company;
+CREATE TABLE employe1(
+    NAME VARCHAR(25),
+    ID INT PRIMARY KEY,
+    DEPT VARCHAR(20),
+    SALARY INT(6),
+    YOE INT
+);
+DESC employe1;
+INSERT INTO employe1(NAME,ID,DEPT,SALARY,YOE)
+VALUES
+('ROHIT',458,'IT',56000,4),
+('KAMAL',486,'FINANCE',86012,6),
+('AMIN',797,'PRODUCTION',9785,6),
+('SAMIR',827,'PRODUCTION',455,7),
+('KUNAL',847,'PRODUCTION',9785,2),
+('MANIK',817,'PRODUCTION',9785,1),
+('ANSHU',837,'PRODUCTION',9785,0),
+('RAJA',857,'PRODUCTION',9785,8);
+
+SELECT * FROM employe1;
