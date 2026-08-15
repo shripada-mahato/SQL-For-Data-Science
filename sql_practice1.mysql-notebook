@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\n-- CREATE database first\nCREATE DATABASE student;\n-- then use the database\nUSE student;\n-- after that create table\nCREATE TABLE student1(\n    name VARCHAR(10),\n    roll INT PRIMARY KEY,\n    dept VARCHAR(5)\n); \n-- describe the table\nDESC student1;\n-- insert value in the table\nINSERT INTO student1(name,roll,dept)\nVALUES\n('shripada',55,'BCA');\n-- print the value\nSELECT * FROM student1;",
+    "content": "\\about\n-- CREATE database first\nCREATE DATABASE student;\n-- then use the database\nUSE student;\n-- after that create table\nCREATE TABLE student1(\n    name VARCHAR(10),\n    roll INT PRIMARY KEY,\n    dept VARCHAR(5)\n); \n-- describe the table\nDESC student1;\n-- insert value in the table\nINSERT INTO student1(name,roll,dept)\nVALUES\n-- ('shripada',55,'BCA'),\n('rahul',56,'MCA');\n-- print the value\nSELECT * FROM student1;",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,11 +15,11 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 19,
+                    "lineNumber": 20,
                     "column": 24
                 },
                 "position": {
-                    "lineNumber": 19,
+                    "lineNumber": 20,
                     "column": 24
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 2,
+                "lineNumber": 1,
                 "column": 1
             },
-            "firstPositionDeltaTop": 137
+            "firstPositionDeltaTop": 0
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -53,7 +53,7 @@
                         }
                     ]
                 },
-                "currentHeight": 117.984375,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -72,15 +72,15 @@
         {
             "state": {
                 "start": 2,
-                "end": 19,
+                "end": 20,
                 "language": "mysql",
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "e803d5fe-f539-424b-e1ec-0b00902c6427"
+                        "31ab9bb4-c631-4bb3-8cea-f23590d285c8"
                     ]
                 },
-                "currentHeight": 141.453125,
+                "currentHeight": 114.609375,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -123,7 +123,7 @@
                         "delimiter": ";",
                         "span": {
                             "start": 246,
-                            "length": 96
+                            "length": 119
                         },
                         "contentStart": 276,
                         "state": 0
@@ -131,10 +131,10 @@
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 342,
+                            "start": 365,
                             "length": 43
                         },
-                        "contentStart": 362,
+                        "contentStart": 385,
                         "state": 0
                     }
                 ]
@@ -142,36 +142,22 @@
             "data": [
                 {
                     "tabId": "785c61be-6c82-42db-c76a-6d243d47ff82",
-                    "resultId": "e803d5fe-f539-424b-e1ec-0b00902c6427",
+                    "resultId": "31ab9bb4-c631-4bb3-8cea-f23590d285c8",
                     "rows": [
                         {
-                            "0": "name",
-                            "1": "varchar(10)",
-                            "2": "YES",
-                            "3": "",
-                            "4": null,
-                            "5": ""
+                            "0": "shripada",
+                            "1": 55,
+                            "2": "BCA"
                         },
                         {
-                            "0": "roll",
-                            "1": "int",
-                            "2": "NO",
-                            "3": "PRI",
-                            "4": null,
-                            "5": ""
-                        },
-                        {
-                            "0": "dept",
-                            "1": "varchar(5)",
-                            "2": "YES",
-                            "3": "",
-                            "4": null,
-                            "5": ""
+                            "0": "rahul",
+                            "1": 56,
+                            "2": "MCA"
                         }
                     ],
                     "columns": [
                         {
-                            "title": "Field",
+                            "title": "name",
                             "field": "0",
                             "dataType": {
                                 "type": 17,
@@ -185,29 +171,32 @@
                                 "parameterFormatType": "OneOrZero"
                             },
                             "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
                         },
                         {
-                            "title": "Type",
+                            "title": "roll",
                             "field": "1",
                             "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
+                                "type": 4,
                                 "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
+                                    "SIGNED",
+                                    "ZEROFILL"
                                 ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
                             },
-                            "inPK": false,
+                            "inPK": true,
                             "nullable": false,
                             "autoIncrement": false
                         },
                         {
-                            "title": "Null",
+                            "title": "dept",
                             "field": "2",
                             "dataType": {
                                 "type": 17,
@@ -221,66 +210,21 @@
                                 "parameterFormatType": "OneOrZero"
                             },
                             "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "Key",
-                            "field": "3",
-                            "dataType": {
-                                "type": 43,
-                                "needsQuotes": true
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "Default",
-                            "field": "4",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "Extra",
-                            "field": "5",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
                         }
                     ],
                     "executionInfo": {
-                        "text": "OK, 3 records retrieved in 3.334ms"
+                        "text": "OK, 2 records retrieved in 1.036ms"
                     },
-                    "totalRowCount": 3,
+                    "totalRowCount": 2,
                     "hasMoreRows": false,
                     "currentPage": 0,
                     "index": 0,
-                    "sql": " \n-- describe the table\nDESC student1;",
-                    "updatable": false
+                    "sql": "\n-- print the value\nSELECT * FROM student1;",
+                    "updatable": true,
+                    "fullTableName": "student1"
                 }
             ]
         }
