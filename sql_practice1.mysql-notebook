@@ -2,25 +2,19 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\n-- CREATE database first\nCREATE DATABASE student;\n-- then use the database\nUSE student;\n-- after that create table\nCREATE TABLE student1(\n    name VARCHAR(10),\n    roll INT PRIMARY KEY,\n    dept VARCHAR(5)\n); \n-- describe the table\nDESC student1;\n-- insert value in the table\nINSERT INTO student1(name,roll,dept)\nVALUES\n-- ('shripada',55,'BCA'),\n('rahul',56,'MCA');\n-- print the value\nSELECT * FROM student1;",
-    "options": {
-        "tabSize": 4,
-        "indentSize": 4,
-        "insertSpaces": true,
-        "defaultEOL": "LF",
-        "trimAutoWhitespace": true
-    },
+    "content": "SHOW DATABASES;\nCREATE DATABASE company;\nUSE company;\nCREATE TABLE employe1(\n    NAME VARCHAR(25),\n    ID INT PRIMARY KEY,\n    DEPT VARCHAR(20),\n    SALARY INT(6),\n    YOE INT\n);\nDESC employe1;\nINSERT INTO employe1(NAME,ID,DEPT,SALARY,YOE)\nVALUES\n('ROHIT',458,'IT',56000,4),\n('KAMAL',486,'FINANCE',86012,6),\n('AMIN',797,'PRODUCTION',9785,6),\n('SAMIR',827,'PRODUCTION',455,7),\n('KUNAL',847,'PRODUCTION',9785,2),\n('MANIK',817,'PRODUCTION',9785,1),\n('ANSHU',837,'PRODUCTION',9785,0),\n('RAJA',857,'PRODUCTION',9785,8);\n\nSELECT * FROM employe1;",
+    "options": {},
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 20,
-                    "column": 24
+                    "lineNumber": 13,
+                    "column": 7
                 },
                 "position": {
-                    "lineNumber": 20,
-                    "column": 24
+                    "lineNumber": 13,
+                    "column": 7
                 }
             }
         ],
@@ -34,130 +28,154 @@
         },
         "contributionsState": {
             "editor.contrib.folding": {},
-            "editor.contrib.wordHighlighter": false
+            "editor.contrib.wordHighlighter": true
         }
     },
     "contexts": [
         {
             "state": {
                 "start": 1,
-                "end": 1,
-                "language": "mysql",
-                "result": {
-                    "type": "text",
-                    "text": [
-                        {
-                            "type": 2,
-                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the code block.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
-                            "language": "ansi"
-                        }
-                    ]
-                },
-                "currentHeight": 28,
-                "currentSet": 1,
-                "statements": [
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 0,
-                            "length": 6
-                        },
-                        "contentStart": 0,
-                        "state": 0
-                    }
-                ]
-            },
-            "data": []
-        },
-        {
-            "state": {
-                "start": 2,
-                "end": 20,
+                "end": 23,
                 "language": "mysql",
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "31ab9bb4-c631-4bb3-8cea-f23590d285c8"
+                        "d14cfd8a-3e82-4598-9fa0-4465f642e382"
                     ]
                 },
-                "currentHeight": 114.609375,
+                "currentHeight": 257.578125,
                 "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 49
+                            "length": 15
                         },
-                        "contentStart": 25,
+                        "contentStart": 0,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 49,
-                            "length": 38
+                            "start": 15,
+                            "length": 25
                         },
-                        "contentStart": 75,
+                        "contentStart": 16,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 87,
-                            "length": 121
+                            "start": 40,
+                            "length": 13
                         },
-                        "contentStart": 115,
+                        "contentStart": 41,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 208,
-                            "length": 38
+                            "start": 53,
+                            "length": 125
                         },
-                        "contentStart": 233,
+                        "contentStart": 54,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 246,
-                            "length": 119
+                            "start": 178,
+                            "length": 15
                         },
-                        "contentStart": 276,
+                        "contentStart": 180,
                         "state": 0
                     },
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 365,
-                            "length": 43
+                            "start": 193,
+                            "length": 321
                         },
-                        "contentStart": 385,
+                        "contentStart": 194,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 514,
+                            "length": 25
+                        },
+                        "contentStart": 516,
                         "state": 0
                     }
                 ]
             },
             "data": [
                 {
-                    "tabId": "785c61be-6c82-42db-c76a-6d243d47ff82",
-                    "resultId": "31ab9bb4-c631-4bb3-8cea-f23590d285c8",
+                    "tabId": "e005ad92-8dba-48e0-afae-d2cf8d17c858",
+                    "resultId": "d14cfd8a-3e82-4598-9fa0-4465f642e382",
                     "rows": [
                         {
-                            "0": "shripada",
-                            "1": 55,
-                            "2": "BCA"
+                            "0": "ROHIT",
+                            "1": 458,
+                            "2": "IT",
+                            "3": 56000,
+                            "4": 4
                         },
                         {
-                            "0": "rahul",
-                            "1": 56,
-                            "2": "MCA"
+                            "0": "KAMAL",
+                            "1": 486,
+                            "2": "FINANCE",
+                            "3": 86012,
+                            "4": 6
+                        },
+                        {
+                            "0": "AMIN",
+                            "1": 797,
+                            "2": "PRODUCTION",
+                            "3": 9785,
+                            "4": 6
+                        },
+                        {
+                            "0": "MANIK",
+                            "1": 817,
+                            "2": "PRODUCTION",
+                            "3": 9785,
+                            "4": 1
+                        },
+                        {
+                            "0": "SAMIR",
+                            "1": 827,
+                            "2": "PRODUCTION",
+                            "3": 455,
+                            "4": 7
+                        },
+                        {
+                            "0": "ANSHU",
+                            "1": 837,
+                            "2": "PRODUCTION",
+                            "3": 9785,
+                            "4": 0
+                        },
+                        {
+                            "0": "KUNAL",
+                            "1": 847,
+                            "2": "PRODUCTION",
+                            "3": 9785,
+                            "4": 2
+                        },
+                        {
+                            "0": "RAJA",
+                            "1": 857,
+                            "2": "PRODUCTION",
+                            "3": 9785,
+                            "4": 8
                         }
                     ],
                     "columns": [
                         {
-                            "title": "name",
+                            "title": "NAME",
                             "field": "0",
                             "dataType": {
                                 "type": 17,
@@ -176,7 +194,7 @@
                             "default": null
                         },
                         {
-                            "title": "roll",
+                            "title": "ID",
                             "field": "1",
                             "dataType": {
                                 "type": 4,
@@ -196,7 +214,7 @@
                             "autoIncrement": false
                         },
                         {
-                            "title": "dept",
+                            "title": "DEPT",
                             "field": "2",
                             "dataType": {
                                 "type": 17,
@@ -213,18 +231,59 @@
                             "nullable": true,
                             "autoIncrement": false,
                             "default": null
+                        },
+                        {
+                            "title": "SALARY",
+                            "field": "3",
+                            "dataType": {
+                                "type": 2,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 5,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INT2"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "YOE",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
                         }
                     ],
                     "executionInfo": {
-                        "text": "OK, 2 records retrieved in 1.036ms"
+                        "text": "OK, 8 records retrieved in 1.04ms"
                     },
-                    "totalRowCount": 2,
+                    "totalRowCount": 8,
                     "hasMoreRows": false,
                     "currentPage": 0,
                     "index": 0,
-                    "sql": "\n-- print the value\nSELECT * FROM student1;",
+                    "sql": "\n\nSELECT * FROM employe1;",
                     "updatable": true,
-                    "fullTableName": "student1"
+                    "fullTableName": "employe1"
                 }
             ]
         }
