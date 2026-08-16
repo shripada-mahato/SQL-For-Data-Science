@@ -2,29 +2,29 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n\n\n",
+    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n\n",
     "options": {},
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 30,
-                    "column": 53
+                    "lineNumber": 36,
+                    "column": 45
                 },
                 "position": {
-                    "lineNumber": 30,
-                    "column": 53
+                    "lineNumber": 36,
+                    "column": 45
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 22,
+                "lineNumber": 24,
                 "column": 1
             },
-            "firstPositionDeltaTop": -4
+            "firstPositionDeltaTop": -18
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -38,12 +38,17 @@
                 "end": 25,
                 "language": "mysql",
                 "result": {
-                    "type": "resultIds",
-                    "list": [
-                        "fef63e5f-9d53-4388-b13a-393855959922"
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "d69aa853-c029-4244-db6d-5cefa3898060",
+                            "content": "OK, 0 records retrieved in 3.53ms"
+                        }
                     ]
                 },
-                "currentHeight": 114.609375,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -183,92 +188,7 @@
                     }
                 ]
             },
-            "data": [
-                {
-                    "tabId": "cb7a9694-0d98-4390-ea1d-c31ba2134329",
-                    "resultId": "fef63e5f-9d53-4388-b13a-393855959922",
-                    "rows": [
-                        {
-                            "0": "Neha",
-                            "1": 61,
-                            "2": "MCA"
-                        },
-                        {
-                            "0": "Anjali",
-                            "1": 63,
-                            "2": "BCA"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "title": "name",
-                            "field": "0",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "roll",
-                            "field": "1",
-                            "dataType": {
-                                "type": 4,
-                                "flags": [
-                                    "SIGNED",
-                                    "ZEROFILL"
-                                ],
-                                "numericPrecision": 10,
-                                "parameterFormatType": "OneOrZero",
-                                "synonyms": [
-                                    "INTEGER",
-                                    "INT4"
-                                ]
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "dept",
-                            "field": "2",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 2 records retrieved in 0.894ms"
-                    },
-                    "totalRowCount": 2,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;",
-                    "updatable": false,
-                    "fullTableName": "student2"
-                }
-            ]
+            "data": []
         },
         {
             "state": {
@@ -278,7 +198,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "61ca31e0-9e41-4aee-e6dd-30d6d0880787"
+                        "28e1fa45-ba2d-43f5-f965-997c8bf53ab7"
                     ]
                 },
                 "currentHeight": 114.609375,
@@ -297,8 +217,8 @@
             },
             "data": [
                 {
-                    "tabId": "cb7a9694-0d98-4390-ea1d-c31ba2134329",
-                    "resultId": "61ca31e0-9e41-4aee-e6dd-30d6d0880787",
+                    "tabId": "a141e926-14c4-4d60-c341-01cc9f6c20d2",
+                    "resultId": "28e1fa45-ba2d-43f5-f965-997c8bf53ab7",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -385,22 +305,27 @@
         {
             "state": {
                 "start": 28,
-                "end": 30,
+                "end": 31,
                 "language": "mysql",
                 "result": {
-                    "type": "resultIds",
-                    "list": [
-                        "a02aad53-5f86-4d50-c7d5-73332269d55b"
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "750796fa-d74c-425a-9072-ccbca8a70fe8",
+                            "content": "OK, 0 records retrieved in 0.616ms"
+                        }
                     ]
                 },
-                "currentHeight": 138.4375,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 73
+                            "length": 33
                         },
                         "contentStart": 21,
                         "state": 0
@@ -408,18 +333,81 @@
                     {
                         "delimiter": ";",
                         "span": {
-                            "start": 73,
+                            "start": 33,
                             "length": 53
                         },
-                        "contentStart": 74,
+                        "contentStart": 34,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 86,
+                            "length": 53
+                        },
+                        "contentStart": 87,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 32,
+                "end": 37,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "d4792de1-e6f3-4389-fad9-78b350db8b9c"
+                    ]
+                },
+                "currentHeight": 114.609375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 28
+                        },
+                        "contentStart": 16,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 28,
+                            "length": 52
+                        },
+                        "contentStart": 29,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 80,
+                            "length": 63
+                        },
+                        "contentStart": 99,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 143,
+                            "length": 45
+                        },
+                        "contentStart": 144,
                         "state": 0
                     }
                 ]
             },
             "data": [
                 {
-                    "tabId": "cb7a9694-0d98-4390-ea1d-c31ba2134329",
-                    "resultId": "a02aad53-5f86-4d50-c7d5-73332269d55b",
+                    "tabId": "a141e926-14c4-4d60-c341-01cc9f6c20d2",
+                    "resultId": "d4792de1-e6f3-4389-fad9-78b350db8b9c",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -427,13 +415,8 @@
                             "2": "BCA"
                         },
                         {
-                            "0": "Neha",
-                            "1": 61,
-                            "2": "MCA"
-                        },
-                        {
-                            "0": "Rohit",
-                            "1": 62,
+                            "0": "Anjali",
+                            "1": 63,
                             "2": "BCA"
                         }
                     ],
@@ -496,13 +479,13 @@
                         }
                     ],
                     "executionInfo": {
-                        "text": "OK, 3 records retrieved in 0.765ms"
+                        "text": "OK, 2 records retrieved in 0.986ms"
                     },
-                    "totalRowCount": 3,
+                    "totalRowCount": 2,
                     "hasMoreRows": false,
                     "currentPage": 0,
                     "index": 0,
-                    "sql": "\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;",
+                    "sql": "\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';",
                     "updatable": false,
                     "fullTableName": "student2"
                 }
@@ -510,8 +493,8 @@
         },
         {
             "state": {
-                "start": 31,
-                "end": 31,
+                "start": 38,
+                "end": 38,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
@@ -530,28 +513,8 @@
         },
         {
             "state": {
-                "start": 32,
-                "end": 32,
-                "language": "mysql",
-                "currentSet": 1,
-                "statements": [
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 0,
-                            "length": 0
-                        },
-                        "contentStart": 0,
-                        "state": 0
-                    }
-                ]
-            },
-            "data": []
-        },
-        {
-            "state": {
-                "start": 33,
-                "end": 33,
+                "start": 39,
+                "end": 39,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [

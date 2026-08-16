@@ -36,3 +36,11 @@ SELECT * FROM student2 WHERE NOT dept = 'MCA';
 -- BETWEEN METHOD --
 SELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;
 SELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;
+
+-- 4th time --
+-- IN method --
+USE student;
+SELECT * FROM student2 WHERE dept IN ('BCA','MCA');
+-- LIKE method --
+SELECT * FROM student2 WHERE name LIKE 'A%';
+SELECT * FROM student2 WHERE name LIKE 'a%';
