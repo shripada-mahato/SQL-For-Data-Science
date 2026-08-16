@@ -31,3 +31,8 @@ SELECT * FROM student2 WHERE roll <= 61;
 SELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';
 SELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;
 SELECT * FROM student2 WHERE NOT dept = 'MCA';
+
+-- 3RD TIME --
+-- BETWEEN METHOD --
+SELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;
+SELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;
