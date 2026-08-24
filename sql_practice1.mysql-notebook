@@ -2,29 +2,29 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n\n",
+    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n-- it starting with A name column --\nSELECT * FROM student2 WHERE name LIKE 'A%';\n-- it starting with a in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- return the name where anywhere a are exist in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a%';\n\n",
     "options": {},
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 36,
-                    "column": 45
+                    "lineNumber": 42,
+                    "column": 68
                 },
                 "position": {
-                    "lineNumber": 36,
-                    "column": 45
+                    "lineNumber": 42,
+                    "column": 68
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 24,
+                "lineNumber": 27,
                 "column": 1
             },
-            "firstPositionDeltaTop": -18
+            "firstPositionDeltaTop": -20
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -198,7 +198,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "28e1fa45-ba2d-43f5-f965-997c8bf53ab7"
+                        "ab614a49-3688-4224-835c-0eaeb9f6f4bd"
                     ]
                 },
                 "currentHeight": 114.609375,
@@ -217,8 +217,8 @@
             },
             "data": [
                 {
-                    "tabId": "a141e926-14c4-4d60-c341-01cc9f6c20d2",
-                    "resultId": "28e1fa45-ba2d-43f5-f965-997c8bf53ab7",
+                    "tabId": "201d05e8-c9d0-4412-c8bb-68e410a5dd7b",
+                    "resultId": "ab614a49-3688-4224-835c-0eaeb9f6f4bd",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -355,15 +355,15 @@
         {
             "state": {
                 "start": 32,
-                "end": 37,
+                "end": 43,
                 "language": "mysql",
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "d4792de1-e6f3-4389-fad9-78b350db8b9c"
+                        "b20e8398-ef72-48cf-fa15-319bd7aff7c7"
                     ]
                 },
-                "currentHeight": 114.609375,
+                "currentHeight": 138.4375,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -401,18 +401,50 @@
                         },
                         "contentStart": 144,
                         "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 188,
+                            "length": 82
+                        },
+                        "contentStart": 226,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 270,
+                            "length": 89
+                        },
+                        "contentStart": 315,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 359,
+                            "length": 114
+                        },
+                        "contentStart": 428,
+                        "state": 0
                     }
                 ]
             },
             "data": [
                 {
-                    "tabId": "a141e926-14c4-4d60-c341-01cc9f6c20d2",
-                    "resultId": "d4792de1-e6f3-4389-fad9-78b350db8b9c",
+                    "tabId": "201d05e8-c9d0-4412-c8bb-68e410a5dd7b",
+                    "resultId": "b20e8398-ef72-48cf-fa15-319bd7aff7c7",
                     "rows": [
                         {
                             "0": "Arjun",
                             "1": 60,
                             "2": "BCA"
+                        },
+                        {
+                            "0": "Neha",
+                            "1": 61,
+                            "2": "MCA"
                         },
                         {
                             "0": "Anjali",
@@ -479,13 +511,13 @@
                         }
                     ],
                     "executionInfo": {
-                        "text": "OK, 2 records retrieved in 0.986ms"
+                        "text": "OK, 3 records retrieved in 0.83ms"
                     },
-                    "totalRowCount": 2,
+                    "totalRowCount": 3,
                     "hasMoreRows": false,
                     "currentPage": 0,
                     "index": 0,
-                    "sql": "\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';",
+                    "sql": "\nSELECT * FROM student2 WHERE name LIKE '%a%';",
                     "updatable": false,
                     "fullTableName": "student2"
                 }
@@ -493,8 +525,8 @@
         },
         {
             "state": {
-                "start": 38,
-                "end": 38,
+                "start": 44,
+                "end": 44,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
@@ -513,8 +545,8 @@
         },
         {
             "state": {
-                "start": 39,
-                "end": 39,
+                "start": 45,
+                "end": 45,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
