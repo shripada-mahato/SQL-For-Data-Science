@@ -2,29 +2,29 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n-- it starting with A name column --\nSELECT * FROM student2 WHERE name LIKE 'A%';\n-- it starting with a in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- return the name where anywhere a are exist in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a%';\n\n",
+    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n-- it starting with A name column --\nSELECT * FROM student2 WHERE name LIKE 'A%';\n-- it starting with a in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- return the name where anywhere a are exist in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a%';\nUSE student;\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- order by --\nUSE student;\nSELECT * FROM student2 ORDER BY roll;\nSELECT * FROM student2 ORDER BY name;\nINSERT INTO student2(name,roll,dept)\nVALUES\n('shripada',23,'CSE'),\n('manik',45,'BBA');\nSELECT * FROM student2;\nSELECT * FROM student2 ORDER BY roll ASC;\nSELECT * FROM student2 ORDER BY roll DESC;\nSELECT * FROM student2 ORDER BY name ASC;\nSELECT * from student2 ORDER BY name DESC;\n\n-- limit --\nSELECT * from student2 LIMIT 20;\nSELECT * FROM student2 ORDER BY name LIKE '%A' LIMIT 2;\n",
     "options": {},
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 42,
-                    "column": 68
+                    "lineNumber": 63,
+                    "column": 1
                 },
                 "position": {
-                    "lineNumber": 42,
-                    "column": 68
+                    "lineNumber": 63,
+                    "column": 1
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 27,
+                "lineNumber": 60,
                 "column": 1
             },
-            "firstPositionDeltaTop": -20
+            "firstPositionDeltaTop": 203
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -39,12 +39,19 @@
                 "language": "mysql",
                 "result": {
                     "type": "text",
+                    "executionInfo": {
+                        "text": ""
+                    },
                     "text": [
                         {
-                            "type": 2,
-                            "index": 0,
-                            "resultId": "d69aa853-c029-4244-db6d-5cefa3898060",
-                            "content": "OK, 0 records retrieved in 3.53ms"
+                            "type": 3,
+                            "content": "sql> SHOW DATABASES;\n+--------------------+\n| Database           |\n+--------------------+\n| company            |\n| information_schema |\n| mysql              |\n| performance_schema |\n| student            |\n| sys                |\n+--------------------+\nOK, 6 records retrieved in 1.725ms\nsql> -- use the database using USE command\nUSE student;\nOK, 0 records retrieved in 0.703ms\n"
+                        },
+                        {
+                            "type": 0,
+                            "index": 2,
+                            "content": "MySQL Error (1050): Table 'student2' already exists",
+                            "language": "ansi"
                         }
                     ]
                 },
@@ -198,7 +205,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "ab614a49-3688-4224-835c-0eaeb9f6f4bd"
+                        "8baf998d-bbe7-4f71-a5b9-dfb7f1f0f2d9"
                     ]
                 },
                 "currentHeight": 114.609375,
@@ -217,8 +224,8 @@
             },
             "data": [
                 {
-                    "tabId": "201d05e8-c9d0-4412-c8bb-68e410a5dd7b",
-                    "resultId": "ab614a49-3688-4224-835c-0eaeb9f6f4bd",
+                    "tabId": "6cc998b9-bf91-4aa3-ba93-9610aef2fe58",
+                    "resultId": "8baf998d-bbe7-4f71-a5b9-dfb7f1f0f2d9",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -309,12 +316,13 @@
                 "language": "mysql",
                 "result": {
                     "type": "text",
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 1.857ms"
+                    },
                     "text": [
                         {
-                            "type": 2,
-                            "index": 0,
-                            "resultId": "750796fa-d74c-425a-9072-ccbca8a70fe8",
-                            "content": "OK, 0 records retrieved in 0.616ms"
+                            "type": 3,
+                            "content": "sql> -- BETWEEN METHOD --\nUSE student;\nOK, 0 records retrieved in 1.392ms\nsql> SELECT * FROM student2 WHERE roll BETWEEN 61 AND 63 LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Neha   |   61 | MCA  |\n| Rohit  |   62 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 3 records retrieved in 0.88ms\nsql> SELECT * FROM student2 WHERE roll BETWEEN 60 AND 62 LIMIT 0, 1001;\n+-------+------+------+\n| name  | roll | dept |\n+-------+------+------+\n| Arjun |   60 | BCA  |\n| Neha  |   61 | MCA  |\n| Rohit |   62 | BCA  |\n+-------+------+------+\nOK, 3 records retrieved in 1.857ms\n"
                         }
                     ]
                 },
@@ -358,12 +366,18 @@
                 "end": 43,
                 "language": "mysql",
                 "result": {
-                    "type": "resultIds",
-                    "list": [
-                        "b20e8398-ef72-48cf-fa15-319bd7aff7c7"
+                    "type": "text",
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 1.004ms"
+                    },
+                    "text": [
+                        {
+                            "type": 3,
+                            "content": "sql> -- IN method --\nUSE student;\nOK, 0 records retrieved in 0.992ms\nsql> SELECT * FROM student2 WHERE dept IN ('BCA','MCA') LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Arjun  |   60 | BCA  |\n| Neha   |   61 | MCA  |\n| Rohit  |   62 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 4 records retrieved in 1.056ms\nsql> -- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%' LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Arjun  |   60 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 2 records retrieved in 0.789ms\nsql> SELECT * FROM student2 WHERE name LIKE 'a%' LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Arjun  |   60 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 2 records retrieved in 0.889ms\nsql> -- it starting with A name column --\nSELECT * FROM student2 WHERE name LIKE 'A%' LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Arjun  |   60 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 2 records retrieved in 1.172ms\nsql> -- it starting with a in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a' LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Neha     |   61 | MCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n+----------+------+------+\nOK, 4 records retrieved in 0.881ms\nsql> -- return the name where anywhere a are exist in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a%' LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Anjali   |   63 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n+----------+------+------+\nOK, 8 records retrieved in 1.004ms\n"
+                        }
                     ]
                 },
-                "currentHeight": 138.4375,
+                "currentHeight": 28,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -431,102 +445,210 @@
                     }
                 ]
             },
-            "data": [
-                {
-                    "tabId": "201d05e8-c9d0-4412-c8bb-68e410a5dd7b",
-                    "resultId": "b20e8398-ef72-48cf-fa15-319bd7aff7c7",
-                    "rows": [
-                        {
-                            "0": "Arjun",
-                            "1": 60,
-                            "2": "BCA"
-                        },
-                        {
-                            "0": "Neha",
-                            "1": 61,
-                            "2": "MCA"
-                        },
-                        {
-                            "0": "Anjali",
-                            "1": 63,
-                            "2": "BCA"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "title": "name",
-                            "field": "0",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "roll",
-                            "field": "1",
-                            "dataType": {
-                                "type": 4,
-                                "flags": [
-                                    "SIGNED",
-                                    "ZEROFILL"
-                                ],
-                                "numericPrecision": 10,
-                                "parameterFormatType": "OneOrZero",
-                                "synonyms": [
-                                    "INTEGER",
-                                    "INT4"
-                                ]
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "dept",
-                            "field": "2",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 3 records retrieved in 0.83ms"
-                    },
-                    "totalRowCount": 3,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "\nSELECT * FROM student2 WHERE name LIKE '%a%';",
-                    "updatable": false,
-                    "fullTableName": "student2"
-                }
-            ]
+            "data": []
         },
         {
             "state": {
                 "start": 44,
-                "end": 44,
+                "end": 45,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "executionInfo": {
+                        "text": "OK, 4 records retrieved in 1.081ms"
+                    },
+                    "text": [
+                        {
+                            "type": 3,
+                            "content": "sql> USE student;\nOK, 0 records retrieved in 0.725ms\nsql> SELECT * FROM student2 WHERE name LIKE '%a' LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Neha     |   61 | MCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n+----------+------+------+\nOK, 4 records retrieved in 1.081ms\n"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 45
+                        },
+                        "contentStart": 13,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 46,
+                "end": 59,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "executionInfo": {
+                        "text": "OK, 9 records retrieved in 0.53ms"
+                    },
+                    "text": [
+                        {
+                            "type": 3,
+                            "content": "sql> -- order by --\nUSE student;\nOK, 0 records retrieved in 0.572ms\nsql> SELECT * FROM student2 ORDER BY roll LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| Anjali   |   63 | BCA  |\n+----------+------+------+\nOK, 7 records retrieved in 1.103ms\nsql> SELECT * FROM student2 ORDER BY name LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Anjali   |   63 | BCA  |\n| Arjun    |   60 | BCA  |\n| manik    |   45 | BBA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n+----------+------+------+\nOK, 7 records retrieved in 1.105ms\nsql> INSERT INTO student2(name,roll,dept)\nVALUES\n('shripada',23,'CSE'),\n('manik',45,'BBA');\nOK, 2 rows affected in 3.115ms\nsql> SELECT * FROM student2 LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| Anjali   |   63 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n+----------+------+------+\nOK, 9 records retrieved in 0.795ms\nsql> SELECT * FROM student2 ORDER BY roll ASC LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| manik    |   45 | BBA  |\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| Anjali   |   63 | BCA  |\n+----------+------+------+\nOK, 9 records retrieved in 1.092ms\nsql> SELECT * FROM student2 ORDER BY roll DESC LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Anjali   |   63 | BCA  |\n| Rohit    |   62 | BCA  |\n| Neha     |   61 | MCA  |\n| Arjun    |   60 | BCA  |\n| manik    |   45 | BBA  |\n| manik    |   45 | BBA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n+----------+------+------+\nOK, 9 records retrieved in 0.834ms\nsql> SELECT * FROM student2 ORDER BY name ASC LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Anjali   |   63 | BCA  |\n| Arjun    |   60 | BCA  |\n| manik    |   45 | BBA  |\n| manik    |   45 | BBA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n+----------+------+------+\nOK, 9 records retrieved in 1.111ms\nsql> SELECT * from student2 ORDER BY name DESC LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| Rohit    |   62 | BCA  |\n| Neha     |   61 | MCA  |\n| manik    |   45 | BBA  |\n| manik    |   45 | BBA  |\n| Arjun    |   60 | BCA  |\n| Anjali   |   63 | BCA  |\n+----------+------+------+\nOK, 9 records retrieved in 0.53ms\n"
+                        }
+                    ]
+                },
+                "currentHeight": 351.984375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 27
+                        },
+                        "contentStart": 15,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 27,
+                            "length": 38
+                        },
+                        "contentStart": 28,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 65,
+                            "length": 38
+                        },
+                        "contentStart": 66,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 103,
+                            "length": 87
+                        },
+                        "contentStart": 104,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 190,
+                            "length": 24
+                        },
+                        "contentStart": 191,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 214,
+                            "length": 42
+                        },
+                        "contentStart": 215,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 256,
+                            "length": 43
+                        },
+                        "contentStart": 257,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 299,
+                            "length": 42
+                        },
+                        "contentStart": 300,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 341,
+                            "length": 43
+                        },
+                        "contentStart": 342,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 384,
+                            "length": 1
+                        },
+                        "contentStart": 383,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 60,
+                "end": 62,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.142ms"
+                    },
+                    "text": [
+                        {
+                            "type": 3,
+                            "content": "sql> -- limit --\nSELECT * from student2 LIMIT 20;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| Anjali   |   63 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n+----------+------+------+\nOK, 9 records retrieved in 0.884ms\nsql> SELECT * FROM student2 ORDER BY name LIKE '%A' LIMIT 2;\n+-------+------+------+\n| name  | roll | dept |\n+-------+------+------+\n| Arjun |   60 | BCA  |\n| manik |   45 | BBA  |\n+-------+------+------+\nOK, 2 records retrieved in 1.142ms\n"
+                        }
+                    ]
+                },
+                "currentHeight": 351.984375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 44
+                        },
+                        "contentStart": 12,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 44,
+                            "length": 56
+                        },
+                        "contentStart": 45,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 63,
+                "end": 63,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [
@@ -538,26 +660,6 @@
                         },
                         "contentStart": 0,
                         "state": 0
-                    }
-                ]
-            },
-            "data": []
-        },
-        {
-            "state": {
-                "start": 45,
-                "end": 45,
-                "language": "mysql",
-                "currentSet": 1,
-                "statements": [
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 0,
-                            "length": 0
-                        },
-                        "contentStart": -1,
-                        "state": 3
                     }
                 ]
             },
