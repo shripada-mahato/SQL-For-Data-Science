@@ -2,29 +2,29 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n-- it starting with A name column --\nSELECT * FROM student2 WHERE name LIKE 'A%';\n-- it starting with a in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- return the name where anywhere a are exist in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a%';\nUSE student;\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- order by --\nUSE student;\nSELECT * FROM student2 ORDER BY roll;\nSELECT * FROM student2 ORDER BY name;\nINSERT INTO student2(name,roll,dept)\nVALUES\n('shripada',23,'CSE'),\n('manik',45,'BBA');\nSELECT * FROM student2;\nSELECT * FROM student2 ORDER BY roll ASC;\nSELECT * FROM student2 ORDER BY roll DESC;\nSELECT * FROM student2 ORDER BY name ASC;\nSELECT * from student2 ORDER BY name DESC;\n\n-- limit --\nSELECT * from student2 LIMIT 20;\nSELECT * FROM student2 ORDER BY name LIKE '%A' LIMIT 2;\n",
+    "content": "SHOW DATABASES;\n-- use the database using USE command\nUSE student;\nCREATE TABLE student2(\n    name VARCHAR(50),\n    roll INT,\n    dept VARCHAR(20)\n);\nINSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nSELECT * FROM student2;\n-- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA';\nSELECT * FROM student2 WHERE roll = 61;\nSELECT * FROM student2 WHERE roll > 61;\nSELECT * FROM student2 WHERE roll < 61;\nSELECT * FROM student2 WHERE roll >= 61;\nSELECT * FROM student2 WHERE roll <= 61;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'BCA';\nSELECT * FROM student2 WHERE dept = 'MCA' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept = 'MCA';\n\n\n-- BETWEEN METHOD --\nUSE student;\nSELECT * FROM student2 WHERE roll BETWEEN 61 AND 63;\nSELECT * FROM student2 WHERE roll BETWEEN 60 AND 62;\n-- IN method --\nUSE student;\nSELECT * FROM student2 WHERE dept IN ('BCA','MCA');\n-- LIKE method --\nSELECT * FROM student2 WHERE name LIKE 'A%';\nSELECT * FROM student2 WHERE name LIKE 'a%';\n-- it starting with A name column --\nSELECT * FROM student2 WHERE name LIKE 'A%';\n-- it starting with a in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- return the name where anywhere a are exist in the name column --\nSELECT * FROM student2 WHERE name LIKE '%a%';\nUSE student;\nSELECT * FROM student2 WHERE name LIKE '%a';\n-- order by --\nUSE student;\nSELECT * FROM student2 ORDER BY roll;\nSELECT * FROM student2 ORDER BY name;\nINSERT INTO student2(name,roll,dept)\nVALUES\n('shripada',23,'CSE'),\n('manik',45,'BBA');\nSELECT * FROM student2;\nSELECT * FROM student2 ORDER BY roll ASC;\nSELECT * FROM student2 ORDER BY roll DESC;\nSELECT * FROM student2 ORDER BY name ASC;\nSELECT * from student2 ORDER BY name DESC;\n\n-- limit --\nSELECT * from student2 LIMIT 20;\nSELECT * FROM student2 ORDER BY name LIKE '%A' LIMIT 2;\nSELECT\nSELECT USER();\nSELECT CURRENT_USER();",
     "options": {},
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 63,
-                    "column": 1
+                    "lineNumber": 25,
+                    "column": 47
                 },
                 "position": {
-                    "lineNumber": 63,
-                    "column": 1
+                    "lineNumber": 25,
+                    "column": 47
                 }
             }
         ],
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 60,
+                "lineNumber": 58,
                 "column": 1
             },
-            "firstPositionDeltaTop": 203
+            "firstPositionDeltaTop": -5
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -40,18 +40,22 @@
                 "result": {
                     "type": "text",
                     "executionInfo": {
-                        "text": ""
+                        "text": "OK, 7 records retrieved in 0.904ms"
                     },
                     "text": [
                         {
                             "type": 3,
-                            "content": "sql> SHOW DATABASES;\n+--------------------+\n| Database           |\n+--------------------+\n| company            |\n| information_schema |\n| mysql              |\n| performance_schema |\n| student            |\n| sys                |\n+--------------------+\nOK, 6 records retrieved in 1.725ms\nsql> -- use the database using USE command\nUSE student;\nOK, 0 records retrieved in 0.703ms\n"
+                            "content": "sql> SHOW DATABASES;\n+--------------------+\n| Database           |\n+--------------------+\n| company            |\n| information_schema |\n| mysql              |\n| performance_schema |\n| student            |\n| sys                |\n+--------------------+\nOK, 6 records retrieved in 1.934ms\nsql> -- use the database using USE command\nUSE student;\nOK, 0 records retrieved in 1.697ms\n"
                         },
                         {
                             "type": 0,
                             "index": 2,
                             "content": "MySQL Error (1050): Table 'student2' already exists",
                             "language": "ansi"
+                        },
+                        {
+                            "type": 3,
+                            "content": "sql> INSERT INTO student2(name,roll,dept)\nVALUES\n('Arjun',60,'BCA'),\n('Neha',61,'MCA'),\n('Rohit',62,'BCA'),\n('Anjali',63,'BCA');\nOK, 4 rows affected in 10.739ms\nsql> SELECT * FROM student2 LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| Anjali   |   63 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| Arjun    |   60 | BCA  |\n| Neha     |   61 | MCA  |\n| Rohit    |   62 | BCA  |\n| Anjali   |   63 | BCA  |\n+----------+------+------+\nOK, 13 records retrieved in 0.783ms\nsql> -- print specific Data by using WHERE, AND, OR, NOT, function\nSELECT * FROM student2 WHERE dept = 'BCA' LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Arjun  |   60 | BCA  |\n| Rohit  |   62 | BCA  |\n| Anjali |   63 | BCA  |\n| Arjun  |   60 | BCA  |\n| Rohit  |   62 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 6 records retrieved in 0.955ms\nsql> SELECT * FROM student2 WHERE roll = 61 LIMIT 0, 1001;\n+------+------+------+\n| name | roll | dept |\n+------+------+------+\n| Neha |   61 | MCA  |\n| Neha |   61 | MCA  |\n+------+------+------+\nOK, 2 records retrieved in 0.905ms\nsql> SELECT * FROM student2 WHERE roll > 61 LIMIT 0, 1001;\n+--------+------+------+\n| name   | roll | dept |\n+--------+------+------+\n| Rohit  |   62 | BCA  |\n| Anjali |   63 | BCA  |\n| Rohit  |   62 | BCA  |\n| Anjali |   63 | BCA  |\n+--------+------+------+\nOK, 4 records retrieved in 0.728ms\nsql> SELECT * FROM student2 WHERE roll < 61 LIMIT 0, 1001;\n+----------+------+------+\n| name     | roll | dept |\n+----------+------+------+\n| Arjun    |   60 | BCA  |\n| shripada |   23 | CSE  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| shripada |   23 | CSE  |\n| manik    |   45 | BBA  |\n| Arjun    |   60 | BCA  |\n+----------+------+------+\nOK, 7 records retrieved in 0.904ms\n"
                         }
                     ]
                 },
@@ -205,7 +209,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "8baf998d-bbe7-4f71-a5b9-dfb7f1f0f2d9"
+                        "0e276302-0867-4ccb-e774-5532c92d368e"
                     ]
                 },
                 "currentHeight": 114.609375,
@@ -224,8 +228,8 @@
             },
             "data": [
                 {
-                    "tabId": "6cc998b9-bf91-4aa3-ba93-9610aef2fe58",
-                    "resultId": "8baf998d-bbe7-4f71-a5b9-dfb7f1f0f2d9",
+                    "tabId": "ddefa6d3-a91a-4798-b7c8-35e318d72361",
+                    "resultId": "0e276302-0867-4ccb-e774-5532c92d368e",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -606,7 +610,7 @@
         {
             "state": {
                 "start": 60,
-                "end": 62,
+                "end": 63,
                 "language": "mysql",
                 "result": {
                     "type": "text",
@@ -640,6 +644,15 @@
                         },
                         "contentStart": 45,
                         "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 100,
+                            "length": 7
+                        },
+                        "contentStart": 101,
+                        "state": 3
                     }
                 ]
             },
@@ -647,23 +660,79 @@
         },
         {
             "state": {
-                "start": 63,
-                "end": 63,
+                "start": 64,
+                "end": 65,
                 "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "5cceb085-52dd-4957-e7b2-50017aa4ea07"
+                    ]
+                },
+                "currentHeight": 36,
                 "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 0
+                            "length": 14
                         },
                         "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 14,
+                            "length": 23
+                        },
+                        "contentStart": 15,
                         "state": 0
                     }
                 ]
             },
-            "data": []
+            "data": [
+                {
+                    "tabId": "ddefa6d3-a91a-4798-b7c8-35e318d72361",
+                    "resultId": "5cceb085-52dd-4957-e7b2-50017aa4ea07",
+                    "rows": [
+                        {
+                            "0": "root@localhost"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "CURRENT_USER()",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 0.526ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "\nSELECT CURRENT_USER();",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
         }
     ]
 }
