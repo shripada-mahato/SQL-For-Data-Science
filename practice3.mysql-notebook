@@ -1,0 +1,862 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "SHOW DATABASES;\nUSE company;\nCREATE TABLE employee_details(\n    id INT,\n    name VARCHAR(50),\n    dept VARCHAR(10),\n    salary FLOAT,\n    yoe FLOAT\n);\nDESC employee_details;\nINSERT INTO employee_details\nVALUES\n-- (1,'rahul','it',50000,5);--\n(2,'kahnd','sales',4856,2);\nSELECT * FROM employee_details;\nSELECT COUNT(*) FROM employee_details;\nSELECT * FROM employee_details WHERE salary > 40000;\nUSE student;\nSELECT * FROM student2 WHERE dept IS NOT NULL;\nSELECT dept, COUNT(*) FROM student2 GROUP BY dept;\nSELECT AVG(roll) AS average_roll FROM student2 GROUP BY roll;",
+    "options": {},
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 21,
+                    "column": 34
+                },
+                "position": {
+                    "lineNumber": 21,
+                    "column": 34
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 18,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 70
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 10,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "19920c49-c9ba-4e23-de4d-118eb39af686",
+                        "b3dc7b7f-3e24-49ac-8dc9-1c2095036e54"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 15
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 15,
+                            "length": 13
+                        },
+                        "contentStart": 16,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 28,
+                            "length": 122
+                        },
+                        "contentStart": 29,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 150,
+                            "length": 23
+                        },
+                        "contentStart": 152,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 173,
+                            "length": 0
+                        },
+                        "contentStart": 172,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "19920c49-c9ba-4e23-de4d-118eb39af686",
+                    "rows": [
+                        {
+                            "0": "company"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "student"
+                        },
+                        {
+                            "0": "sys"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 1.406ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW DATABASES",
+                    "updatable": false
+                },
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "b3dc7b7f-3e24-49ac-8dc9-1c2095036e54",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.739ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\nUSE company",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 11,
+                "end": 17,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "9975e8f9-c566-4f97-905c-c89a03d3c061",
+                        "17e5a547-592f-434f-864e-36ca2ffd8bb4",
+                        "27a5892c-ed10-499d-ca8d-3e8d5e3a789b",
+                        "6189adc3-41e4-4cb8-ab9f-b24801dd1a36"
+                    ]
+                },
+                "currentHeight": 165.4375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 94
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 94,
+                            "length": 32
+                        },
+                        "contentStart": 95,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 126,
+                            "length": 39
+                        },
+                        "contentStart": 127,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 165,
+                            "length": 53
+                        },
+                        "contentStart": 166,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "9975e8f9-c566-4f97-905c-c89a03d3c061",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "rahul",
+                            "2": "it",
+                            "3": 50000,
+                            "4": 5
+                        },
+                        {
+                            "0": 2,
+                            "1": "kahnd",
+                            "2": "sales",
+                            "3": 4856,
+                            "4": 2
+                        },
+                        {
+                            "0": 2,
+                            "1": "kahnd",
+                            "2": "sales",
+                            "3": 4856,
+                            "4": 2
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "salary",
+                            "field": "3",
+                            "dataType": {
+                                "type": 7,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 53,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FLOAT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "yoe",
+                            "field": "4",
+                            "dataType": {
+                                "type": 7,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 53,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FLOAT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 2.251ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\nSELECT * FROM employee_details",
+                    "updatable": false,
+                    "fullTableName": "employee_details"
+                },
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "17e5a547-592f-434f-864e-36ca2ffd8bb4",
+                    "rows": [
+                        {
+                            "0": 3
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "COUNT(*)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 11.835ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 2,
+                    "sql": "\nSELECT COUNT(*) FROM employee_details",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "27a5892c-ed10-499d-ca8d-3e8d5e3a789b",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "rahul",
+                            "2": "it",
+                            "3": 50000,
+                            "4": 5
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "salary",
+                            "field": "3",
+                            "dataType": {
+                                "type": 7,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 53,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FLOAT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "yoe",
+                            "field": "4",
+                            "dataType": {
+                                "type": 7,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 53,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FLOAT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.264ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 3,
+                    "sql": "\nSELECT * FROM employee_details WHERE salary > 40000",
+                    "updatable": false,
+                    "fullTableName": "employee_details"
+                },
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "6189adc3-41e4-4cb8-ab9f-b24801dd1a36",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 row affected in 38.045ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "INSERT INTO employee_details\nVALUES\n-- (1,'rahul','it',50000,5);--\n(2,'kahnd','sales',4856,2)",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 18,
+                "end": 19,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "70df3bcf-0c2d-426a-e82e-8d3ac9d09deb",
+                        "5447629a-6130-415b-9114-002eb86bbe70"
+                    ]
+                },
+                "currentHeight": 351.984375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 47
+                        },
+                        "contentStart": 13,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "70df3bcf-0c2d-426a-e82e-8d3ac9d09deb",
+                    "rows": [
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Neha",
+                            "1": 61,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Rohit",
+                            "1": 62,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Anjali",
+                            "1": 63,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "shripada",
+                            "1": 23,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "shripada",
+                            "1": 23,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "shripada",
+                            "1": 23,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Neha",
+                            "1": 61,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Rohit",
+                            "1": 62,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Anjali",
+                            "1": 63,
+                            "2": "BCA"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 13 records retrieved in 1.203ms"
+                    },
+                    "totalRowCount": 13,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\nSELECT * FROM student2 WHERE dept IS NOT NULL",
+                    "updatable": false,
+                    "fullTableName": "student2"
+                },
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "5447629a-6130-415b-9114-002eb86bbe70",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.985ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "USE student",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 20,
+                "end": 21,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "dd757164-26f0-4998-ca61-553fe8bdd87e"
+                    ]
+                },
+                "currentHeight": 233.75,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 50
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 50,
+                            "length": 62
+                        },
+                        "contentStart": 51,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "20abe466-dfe6-4688-81ba-79b3ac36e429",
+                    "resultId": "dd757164-26f0-4998-ca61-553fe8bdd87e",
+                    "rows": [
+                        {
+                            "0": "60.0000"
+                        },
+                        {
+                            "0": "61.0000"
+                        },
+                        {
+                            "0": "62.0000"
+                        },
+                        {
+                            "0": "63.0000"
+                        },
+                        {
+                            "0": "23.0000"
+                        },
+                        {
+                            "0": "45.0000"
+                        },
+                        {
+                            "0": "64.0000"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "average_roll",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 7 records retrieved in 0.854ms"
+                    },
+                    "totalRowCount": 7,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "\nSELECT AVG(roll) AS average_roll FROM student2 GROUP BY roll;",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
+        }
+    ]
+}
