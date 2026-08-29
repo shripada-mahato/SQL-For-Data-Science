@@ -1,19 +1,25 @@
 {
     "type": "MySQLNotebook",
     "version": "1.0",
-    "caption": "DB Notebook",
-    "content": "USE student;\nSELECT DISTINCT dept FROM student2;\nSELECT name AS student_name FROM student2;\nSELECT dept AS department FROM student2;\nSELECT \nname AS student_name,\ndept AS department FROM student2;\n",
-    "options": {},
+    "caption": "Result #1",
+    "content": "SELECT SUM(roll) as total_sum FROM student2;",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 8,
+                    "lineNumber": 1,
                     "column": 1
                 },
                 "position": {
-                    "lineNumber": 8,
+                    "lineNumber": 1,
                     "column": 1
                 }
             }
@@ -21,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 3,
+                "lineNumber": 1,
                 "column": 1
             },
-            "firstPositionDeltaTop": 155
+            "firstPositionDeltaTop": 0
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -35,70 +41,56 @@
         {
             "state": {
                 "start": 1,
-                "end": 2,
+                "end": 1,
                 "language": "mysql",
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "55593d8b-d0a7-46eb-c6e7-344c0c6a6ea3",
-                        "0c0598ec-7359-43a7-cd13-3b28161e1a77"
+                        "a00eeb99-930d-4fae-ffe5-f3f3d2b811b3"
                     ]
                 },
-                "currentHeight": 189.265625,
+                "currentHeight": 352,
                 "currentSet": 1,
+                "maximizeResultPane": true,
                 "statements": [
                     {
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 12
+                            "length": 44
                         },
                         "contentStart": 0,
-                        "state": 0
-                    },
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 12,
-                            "length": 36
-                        },
-                        "contentStart": 13,
                         "state": 0
                     }
                 ]
             },
             "data": [
                 {
-                    "tabId": "0dae6e50-5839-41d1-d9ed-e9dda276cb69",
-                    "resultId": "55593d8b-d0a7-46eb-c6e7-344c0c6a6ea3",
+                    "tabId": "36bd3083-e5c9-405d-8f81-caa02c2349da",
+                    "resultId": "a00eeb99-930d-4fae-ffe5-f3f3d2b811b3",
                     "rows": [
                         {
-                            "0": "BCA"
-                        },
-                        {
-                            "0": "MCA"
-                        },
-                        {
-                            "0": "CSE"
-                        },
-                        {
-                            "0": "BBA"
+                            "0": "651"
                         }
                     ],
                     "columns": [
                         {
-                            "title": "dept",
+                            "title": "total_sum",
                             "field": "0",
                             "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
+                                "type": 10,
                                 "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
+                                    "UNSIGNED",
+                                    "ZEROFILL"
                                 ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
                             },
                             "inPK": false,
                             "nullable": false,
@@ -106,291 +98,17 @@
                         }
                     ],
                     "executionInfo": {
-                        "text": "OK, 4 records retrieved in 1.178ms"
+                        "text": "OK, 1 record retrieved in 0.762ms"
                     },
-                    "totalRowCount": 4,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 1,
-                    "sql": "\nSELECT DISTINCT dept FROM student2",
-                    "updatable": false,
-                    "fullTableName": ""
-                },
-                {
-                    "tabId": "0dae6e50-5839-41d1-d9ed-e9dda276cb69",
-                    "resultId": "0c0598ec-7359-43a7-cd13-3b28161e1a77",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 0.751ms"
-                    },
-                    "totalRowCount": 0,
+                    "totalRowCount": 1,
                     "hasMoreRows": false,
                     "currentPage": 0,
                     "index": 0,
-                    "sql": "USE student",
-                    "updatable": false
+                    "sql": "SELECT SUM(roll) as total_sum FROM student2",
+                    "updatable": false,
+                    "fullTableName": ""
                 }
             ]
-        },
-        {
-            "state": {
-                "start": 3,
-                "end": 7,
-                "language": "mysql",
-                "result": {
-                    "type": "resultIds",
-                    "list": [
-                        "f1e9fbe5-69af-49d6-8c6b-6125b573fb0c",
-                        "658973ea-39b0-49e7-df22-627191c0246e"
-                    ]
-                },
-                "currentHeight": 351.984375,
-                "currentSet": 1,
-                "statements": [
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 0,
-                            "length": 42
-                        },
-                        "contentStart": 0,
-                        "state": 0
-                    },
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 42,
-                            "length": 41
-                        },
-                        "contentStart": 43,
-                        "state": 0
-                    },
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 83,
-                            "length": 64
-                        },
-                        "contentStart": 84,
-                        "state": 0
-                    }
-                ]
-            },
-            "data": [
-                {
-                    "tabId": "0dae6e50-5839-41d1-d9ed-e9dda276cb69",
-                    "resultId": "f1e9fbe5-69af-49d6-8c6b-6125b573fb0c",
-                    "rows": [
-                        {
-                            "0": "BCA"
-                        },
-                        {
-                            "0": "MCA"
-                        },
-                        {
-                            "0": "BCA"
-                        },
-                        {
-                            "0": "BCA"
-                        },
-                        {
-                            "0": "CSE"
-                        },
-                        {
-                            "0": "CSE"
-                        },
-                        {
-                            "0": "BBA"
-                        },
-                        {
-                            "0": "CSE"
-                        },
-                        {
-                            "0": "BBA"
-                        },
-                        {
-                            "0": "BCA"
-                        },
-                        {
-                            "0": "MCA"
-                        },
-                        {
-                            "0": "BCA"
-                        },
-                        {
-                            "0": "BCA"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "title": "department",
-                            "field": "0",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 13 records retrieved in 1.038ms"
-                    },
-                    "totalRowCount": 13,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 1,
-                    "sql": "\nSELECT dept AS department FROM student2;",
-                    "updatable": false,
-                    "fullTableName": "student2"
-                },
-                {
-                    "tabId": "0dae6e50-5839-41d1-d9ed-e9dda276cb69",
-                    "resultId": "658973ea-39b0-49e7-df22-627191c0246e",
-                    "rows": [
-                        {
-                            "0": "Arjun",
-                            "1": "BCA"
-                        },
-                        {
-                            "0": "Neha",
-                            "1": "MCA"
-                        },
-                        {
-                            "0": "Rohit",
-                            "1": "BCA"
-                        },
-                        {
-                            "0": "Anjali",
-                            "1": "BCA"
-                        },
-                        {
-                            "0": "shripada",
-                            "1": "CSE"
-                        },
-                        {
-                            "0": "shripada",
-                            "1": "CSE"
-                        },
-                        {
-                            "0": "manik",
-                            "1": "BBA"
-                        },
-                        {
-                            "0": "shripada",
-                            "1": "CSE"
-                        },
-                        {
-                            "0": "manik",
-                            "1": "BBA"
-                        },
-                        {
-                            "0": "Arjun",
-                            "1": "BCA"
-                        },
-                        {
-                            "0": "Neha",
-                            "1": "MCA"
-                        },
-                        {
-                            "0": "Rohit",
-                            "1": "BCA"
-                        },
-                        {
-                            "0": "Anjali",
-                            "1": "BCA"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "title": "student_name",
-                            "field": "0",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        },
-                        {
-                            "title": "department",
-                            "field": "1",
-                            "dataType": {
-                                "type": 17,
-                                "characterMaximumLength": 65535,
-                                "flags": [
-                                    "BINARY",
-                                    "ASCII",
-                                    "UNICODE"
-                                ],
-                                "needsQuotes": true,
-                                "parameterFormatType": "OneOrZero"
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 13 records retrieved in 0.825ms"
-                    },
-                    "totalRowCount": 13,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 2,
-                    "sql": "\nSELECT \nname AS student_name,\ndept AS department FROM student2;",
-                    "updatable": false,
-                    "fullTableName": "student2"
-                }
-            ]
-        },
-        {
-            "state": {
-                "start": 8,
-                "end": 8,
-                "language": "mysql",
-                "currentSet": 1,
-                "statements": [
-                    {
-                        "delimiter": ";",
-                        "span": {
-                            "start": 0,
-                            "length": 0
-                        },
-                        "contentStart": 0,
-                        "state": 0
-                    }
-                ]
-            },
-            "data": []
         }
     ]
 }
