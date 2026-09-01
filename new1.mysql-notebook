@@ -2,24 +2,24 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "",
+    "content": "USE student;\nSELECT dept, COUNT(*) total FROM student2 GROUP by dept HAVING (total)> 2;\nSELECT dept, AVG(roll) AS average FROM student2 GROUP by dept HAVING (average) > 61;",
     "options": {},
     "viewState": {
         "cursorState": [
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 1,
-                    "column": 1
+                    "lineNumber": 3,
+                    "column": 84
                 },
                 "position": {
-                    "lineNumber": 1,
-                    "column": 1
+                    "lineNumber": 3,
+                    "column": 84
                 }
             }
         ],
         "viewState": {
-            "scrollLeft": 0,
+            "scrollLeft": 77,
             "firstPosition": {
                 "lineNumber": 1,
                 "column": 1
@@ -35,22 +35,110 @@
         {
             "state": {
                 "start": 1,
-                "end": 1,
+                "end": 3,
                 "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "d53cdc8f-c7c0-42d6-8520-998705261453"
+                    ]
+                },
+                "currentHeight": 90.78125,
                 "currentSet": 1,
                 "statements": [
                     {
                         "delimiter": ";",
                         "span": {
                             "start": 0,
-                            "length": 0
+                            "length": 12
                         },
                         "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 75
+                        },
+                        "contentStart": 13,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 87,
+                            "length": 85
+                        },
+                        "contentStart": 88,
                         "state": 0
                     }
                 ]
             },
-            "data": []
+            "data": [
+                {
+                    "tabId": "9bca2df8-250c-48a1-d0a2-68704db3eb82",
+                    "resultId": "d53cdc8f-c7c0-42d6-8520-998705261453",
+                    "rows": [
+                        {
+                            "0": "BCA",
+                            "1": "61.6667"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "dept",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "average",
+                            "field": "1",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.854ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "\nSELECT dept, AVG(roll) AS average FROM student2 GROUP by dept HAVING (average) > 61;",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
         }
     ]
 }
