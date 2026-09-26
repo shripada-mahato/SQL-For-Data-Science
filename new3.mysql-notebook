@@ -1,0 +1,351 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "use student;\nSELECT\nCASE\nWHEN roll >= 70 THEN 'high'\nWHEN roll >= 60 THEN 'medium'\nELSE 'low'\nEND as roll_status, \nCOUNT(*) as total_student\nFROM student2\nGROUP by \nCASE\nWHEN roll >= 70 THEN 'high'\nWHEN roll >= 60 THEN 'medium'\nELSE 'low'\nEND \nHAVING COUNT(*) > 2;\n\nSELECT dept,AVG(roll) FROM student2\nGROUP BY dept;\nSELECT * FROM student2;\nuse student;\n",
+    "options": {},
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 22,
+                    "column": 1
+                },
+                "position": {
+                    "lineNumber": 22,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 5,
+                "column": 1
+            },
+            "firstPositionDeltaTop": -4
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 17,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "925954c2-f81d-4037-ca1f-314dec9f8f2f",
+                            "content": "OK, 0 records retrieved in 1.183ms"
+                        },
+                        {
+                            "type": 2,
+                            "index": 1,
+                            "resultId": "bc424c06-9cff-42cc-800f-f510d90aed4e",
+                            "content": "OK, 0 records retrieved in 1.158ms"
+                        }
+                    ]
+                },
+                "currentHeight": 44.65625,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 252
+                        },
+                        "contentStart": 13,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 264,
+                            "length": 1
+                        },
+                        "contentStart": 263,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 18,
+                "end": 21,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "35076bd3-e9d0-49fa-f699-fa43e0737778",
+                        "4965d40a-8298-4762-d18d-e682e44f728a",
+                        "60efbd2f-7eab-4ead-c13f-b465f0c643a0"
+                    ]
+                },
+                "currentHeight": 141.609375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 50
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 50,
+                            "length": 24
+                        },
+                        "contentStart": 51,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 74,
+                            "length": 13
+                        },
+                        "contentStart": 75,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "fcd2f089-7eac-4493-84b8-0e87fe5a43b1",
+                    "resultId": "35076bd3-e9d0-49fa-f699-fa43e0737778",
+                    "rows": [
+                        {
+                            "0": "MCA",
+                            "1": "66.6667"
+                        },
+                        {
+                            "0": "BBA",
+                            "1": "45.0000"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "dept",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "AVG(roll)",
+                            "field": "1",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 23.41ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT dept,AVG(roll) FROM student2\nGROUP BY dept",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "fcd2f089-7eac-4493-84b8-0e87fe5a43b1",
+                    "resultId": "4965d40a-8298-4762-d18d-e682e44f728a",
+                    "rows": [
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "karan",
+                            "1": 80,
+                            "2": "MCA"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 0.833ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\nSELECT * FROM student2",
+                    "updatable": false,
+                    "fullTableName": "student2"
+                },
+                {
+                    "tabId": "fcd2f089-7eac-4493-84b8-0e87fe5a43b1",
+                    "resultId": "60efbd2f-7eab-4ead-c13f-b465f0c643a0",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.725ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 2,
+                    "sql": "\nuse student",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 22,
+                "end": 22,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 0
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}

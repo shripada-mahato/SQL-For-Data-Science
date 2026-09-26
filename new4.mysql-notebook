@@ -1,0 +1,818 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "use student;\nSELECT * FROM student2 WHERE roll > 60;\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'bca';\nSELECT * FROM student2;\nINSERT INTO student2 (name,roll,dept)\nVALUES\n('Amit', 66, 'BCA'),\n('Priya', 72, 'MCA'),\n('Suman', 58, 'CSE'),\n('Riya', 81, 'BCA'),\n('Rahul', 69, 'CSE'),\n('Sneha', 75, 'MCA'),\n('Vikash', 55, 'BCA'),\n('Puja', 63, 'CSE'),\n('Ankit', 77, 'MCA'),\n('Payel', 68, 'BCA'),\n('Sourav', 82, 'CSE'),\n('Moumita', 71, 'MCA'),\n('Rakesh', 59, 'BCA'),\n('Tina', 73, 'CSE'),\n('Abhishek', 88, 'MCA'),\n('Kajal', 64, 'BCA'),\n('Deb', 67, 'CSE'),\n('Nisha', 79, 'MCA'),\n('Sumit', 61, 'BCA'),\n('Isha', 70, 'CSE');\nSELECT * FROM student2;\nSELECT * FROM student2 WHERE dept = 'mca' OR roll = 63;\nSELECT * FROM student2 WHERE NOT dept <> 'bca';\nSELECT * FROM student2 WHERE roll BETWEEN 60 and 70;\nSELECT * FROM student2 WHERE dept IN ('bca','mca','cse');\nSELECT * FROM student2 WHERE name LIKE 'a%';\nSELECT * FROM student2 ORDER BY roll DESC;\nSELECT * FROM student2 ORDER BY roll DESC LIMIT 3;\nSELECT COUNT(*) FROM student2;\nSELECT * FROM student2;\n",
+    "options": {},
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 36,
+                    "column": 24
+                },
+                "position": {
+                    "lineNumber": 36,
+                    "column": 24
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 20,
+                "column": 1
+            },
+            "firstPositionDeltaTop": -19
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 4,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "69a99aee-cb5c-482c-a389-ebf5123a153d",
+                        "da198a99-5e61-42aa-8d5f-749c9a7fcc52",
+                        "7d0172aa-8498-4417-9433-7dd0ea813f1f",
+                        "2d77a637-f58d-4020-8e99-53c12347c37a"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 40
+                        },
+                        "contentStart": 13,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 52,
+                            "length": 57
+                        },
+                        "contentStart": 53,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 109,
+                            "length": 24
+                        },
+                        "contentStart": 110,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "346218b7-3558-4513-8f0b-df0456d6992b",
+                    "resultId": "69a99aee-cb5c-482c-a389-ebf5123a153d",
+                    "rows": [
+                        {
+                            "0": "karan",
+                            "1": 80,
+                            "2": "MCA"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 0.77ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\nSELECT * FROM student2 WHERE roll > 60",
+                    "updatable": false,
+                    "fullTableName": "student2"
+                },
+                {
+                    "tabId": "346218b7-3558-4513-8f0b-df0456d6992b",
+                    "resultId": "da198a99-5e61-42aa-8d5f-749c9a7fcc52",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 15,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "UNICODE",
+                                    "ASCII"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "One",
+                                "synonyms": [
+                                    "CHAR VARYING",
+                                    "CHARACTER VARYING",
+                                    "VARCHARACTER"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 15,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "UNICODE",
+                                    "ASCII"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "One",
+                                "synonyms": [
+                                    "CHAR VARYING",
+                                    "CHARACTER VARYING",
+                                    "VARCHARACTER"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 1.343ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 2,
+                    "sql": "\nSELECT * FROM student2 WHERE roll > 60 AND dept = 'bca'",
+                    "updatable": false,
+                    "fullTableName": "student2"
+                },
+                {
+                    "tabId": "346218b7-3558-4513-8f0b-df0456d6992b",
+                    "resultId": "7d0172aa-8498-4417-9433-7dd0ea813f1f",
+                    "rows": [
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "karan",
+                            "1": 80,
+                            "2": "MCA"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 1.017ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 3,
+                    "sql": "\nSELECT * FROM student2",
+                    "updatable": false,
+                    "fullTableName": "student2"
+                },
+                {
+                    "tabId": "346218b7-3558-4513-8f0b-df0456d6992b",
+                    "resultId": "2d77a637-f58d-4020-8e99-53c12347c37a",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.748ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "use student",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 5,
+                "end": 27,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 485
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 485,
+                            "length": 24
+                        },
+                        "contentStart": 486,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 28,
+                "end": 37,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "399710e7-c145-4dc9-ff96-0c1b0bf2b69c"
+                    ]
+                },
+                "currentHeight": 351.984375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 55
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 55,
+                            "length": 48
+                        },
+                        "contentStart": 56,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 103,
+                            "length": 53
+                        },
+                        "contentStart": 104,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 156,
+                            "length": 58
+                        },
+                        "contentStart": 157,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 214,
+                            "length": 45
+                        },
+                        "contentStart": 215,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 259,
+                            "length": 43
+                        },
+                        "contentStart": 260,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 302,
+                            "length": 51
+                        },
+                        "contentStart": 303,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 353,
+                            "length": 31
+                        },
+                        "contentStart": 354,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 384,
+                            "length": 24
+                        },
+                        "contentStart": 385,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 408,
+                            "length": 1
+                        },
+                        "contentStart": 407,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "346218b7-3558-4513-8f0b-df0456d6992b",
+                    "resultId": "399710e7-c145-4dc9-ff96-0c1b0bf2b69c",
+                    "rows": [
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "manik",
+                            "1": 45,
+                            "2": "BBA"
+                        },
+                        {
+                            "0": "Arjun",
+                            "1": 60,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "karan",
+                            "1": 80,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Amit",
+                            "1": 66,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Priya",
+                            "1": 72,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Suman",
+                            "1": 58,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Riya",
+                            "1": 81,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Rahul",
+                            "1": 69,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Sneha",
+                            "1": 75,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Vikash",
+                            "1": 55,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Puja",
+                            "1": 63,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Ankit",
+                            "1": 77,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Payel",
+                            "1": 68,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Sourav",
+                            "1": 82,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Moumita",
+                            "1": 71,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Rakesh",
+                            "1": 59,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Tina",
+                            "1": 73,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Abhishek",
+                            "1": 88,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Kajal",
+                            "1": 64,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Deb",
+                            "1": 67,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Nisha",
+                            "1": 79,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Sumit",
+                            "1": 61,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Isha",
+                            "1": 70,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Amit",
+                            "1": 66,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Priya",
+                            "1": 72,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Suman",
+                            "1": 58,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Riya",
+                            "1": 81,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Rahul",
+                            "1": 69,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Sneha",
+                            "1": 75,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Vikash",
+                            "1": 55,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Puja",
+                            "1": 63,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Ankit",
+                            "1": 77,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Payel",
+                            "1": 68,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Sourav",
+                            "1": 82,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Moumita",
+                            "1": 71,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Rakesh",
+                            "1": 59,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Tina",
+                            "1": 73,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Abhishek",
+                            "1": 88,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Kajal",
+                            "1": 64,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Deb",
+                            "1": 67,
+                            "2": "CSE"
+                        },
+                        {
+                            "0": "Nisha",
+                            "1": 79,
+                            "2": "MCA"
+                        },
+                        {
+                            "0": "Sumit",
+                            "1": 61,
+                            "2": "BCA"
+                        },
+                        {
+                            "0": "Isha",
+                            "1": 70,
+                            "2": "CSE"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 45 records retrieved in 1.089ms"
+                    },
+                    "totalRowCount": 45,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "\nSELECT * FROM student2;",
+                    "updatable": false,
+                    "fullTableName": "student2"
+                }
+            ]
+        }
+    ]
+}
