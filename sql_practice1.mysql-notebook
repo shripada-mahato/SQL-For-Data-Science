@@ -21,10 +21,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 60,
+                "lineNumber": 58,
                 "column": 1
             },
-            "firstPositionDeltaTop": 214
+            "firstPositionDeltaTop": -14
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -209,7 +209,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "338090d5-f4ec-4262-bd17-c1a3f2f8b026"
+                        "06771517-ce98-41c0-9927-7a5d61a656b6"
                     ]
                 },
                 "currentHeight": 114.609375,
@@ -228,8 +228,8 @@
             },
             "data": [
                 {
-                    "tabId": "9b483657-f03a-40e9-8c84-3509189899a5",
-                    "resultId": "338090d5-f4ec-4262-bd17-c1a3f2f8b026",
+                    "tabId": "cd57c988-5e9c-4e8c-e4e2-817168b3d2a8",
+                    "resultId": "06771517-ce98-41c0-9927-7a5d61a656b6",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -510,7 +510,7 @@
                         }
                     ]
                 },
-                "currentHeight": 28,
+                "currentHeight": 351.984375,
                 "currentSet": 1,
                 "statements": [
                     {
@@ -666,7 +666,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "8f50aed0-f048-4e75-c1e9-6c9fbd8012a6"
+                        "0a14d850-98f0-44cd-abd4-1f24ee9fcc2f"
                     ]
                 },
                 "currentHeight": 36,
@@ -694,8 +694,8 @@
             },
             "data": [
                 {
-                    "tabId": "9b483657-f03a-40e9-8c84-3509189899a5",
-                    "resultId": "8f50aed0-f048-4e75-c1e9-6c9fbd8012a6",
+                    "tabId": "cd57c988-5e9c-4e8c-e4e2-817168b3d2a8",
+                    "resultId": "0a14d850-98f0-44cd-abd4-1f24ee9fcc2f",
                     "rows": [
                         {
                             "0": "root@localhost"

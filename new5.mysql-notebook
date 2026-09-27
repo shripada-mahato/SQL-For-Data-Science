@@ -1,0 +1,222 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "USE student;\nSELECT COUNT(*) FROM student2 WHERE dept IS NOT NULL;\nSELECT DISTINCT dept FROM student2;\nSELECT DISTINCT name FROM student2;\nSELECT AVG(roll) FROM student2;\nSELECT MAX(roll) FROM student2;\nSELECT SUM(roll) FROM student2;\nSELECT dept, COUNT(*) FROM student2 GROUP BY dept;",
+    "options": {},
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 8,
+                    "column": 51
+                },
+                "position": {
+                    "lineNumber": 8,
+                    "column": 51
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 0
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "1afaa393-a893-4556-a61d-0f200b546f69",
+                            "content": "OK, 0 records retrieved in 0.7ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 8,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "e387e83e-862d-4e7c-8543-bee5f0311efd"
+                    ]
+                },
+                "currentHeight": 162.265625,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 53
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 53,
+                            "length": 36
+                        },
+                        "contentStart": 54,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 89,
+                            "length": 36
+                        },
+                        "contentStart": 90,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 125,
+                            "length": 32
+                        },
+                        "contentStart": 126,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 157,
+                            "length": 32
+                        },
+                        "contentStart": 158,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 189,
+                            "length": 32
+                        },
+                        "contentStart": 190,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 221,
+                            "length": 51
+                        },
+                        "contentStart": 222,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "7feadbfc-ac20-4960-f9e1-2ffc775f501f",
+                    "resultId": "e387e83e-862d-4e7c-8543-bee5f0311efd",
+                    "rows": [
+                        {
+                            "0": "MCA",
+                            "1": 15
+                        },
+                        {
+                            "0": "BBA",
+                            "1": 2
+                        },
+                        {
+                            "0": "BCA",
+                            "1": 14
+                        },
+                        {
+                            "0": "CSE",
+                            "1": 14
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "dept",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "COUNT(*)",
+                            "field": "1",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 4 records retrieved in 2.25ms"
+                    },
+                    "totalRowCount": 4,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "\nSELECT dept, COUNT(*) FROM student2 GROUP BY dept;",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
+        }
+    ]
+}
