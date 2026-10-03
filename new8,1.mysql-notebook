@@ -1,0 +1,559 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "USE student;\nSELECT dept, AVG(roll)  as average_roll FROM student2 \nGROUP by dept HAVING average_roll > 65 ORDER BY average_roll DESC;\n-- inner join -- \nCREATE TABLE department(\ndept VARCHAR(20),\nhod VARCHAR(50)\n);\n\nINSERT INTO department(\ndept, hod) VALUES\n('BCA', 'Mr. Das'),\n('CSE','Mrs. Roy'),\n('MCA','Mr. Sen');\nSELECT * FROM department;\nSELECT student2.name, student2.dept, department.hod\nFROM student2\nINNER JOIN department\nON student2.dept = department.dept;",
+    "options": {},
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 19,
+                    "column": 36
+                },
+                "position": {
+                    "lineNumber": 19,
+                    "column": 36
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 3,
+                "column": 1
+            },
+            "firstPositionDeltaTop": -22
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 3,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "6fcba00c-9a2e-4478-fd6f-d7066bd22dfa",
+                        "e5b5ea06-23bb-45d2-99f9-dd6a7d48e3bd"
+                    ]
+                },
+                "currentHeight": 117.78125,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 12
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 12,
+                            "length": 122
+                        },
+                        "contentStart": 13,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
+                    "resultId": "6fcba00c-9a2e-4478-fd6f-d7066bd22dfa",
+                    "rows": [
+                        {
+                            "0": "CSE",
+                            "1": "74.7778"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "dept",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "average_roll",
+                            "field": "1",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 0.97ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\nSELECT dept, AVG(roll)  as average_roll FROM student2 \nGROUP by dept HAVING average_roll > 65 ORDER BY average_roll DESC",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
+                    "resultId": "e5b5ea06-23bb-45d2-99f9-dd6a7d48e3bd",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.772ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "USE student",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 4,
+                "end": 15,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "58402e05-b054-4a14-a653-dcb23f0bfded"
+                    ]
+                },
+                "currentHeight": 138.4375,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 79
+                        },
+                        "contentStart": 18,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 79,
+                            "length": 102
+                        },
+                        "contentStart": 81,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 181,
+                            "length": 26
+                        },
+                        "contentStart": 182,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
+                    "resultId": "58402e05-b054-4a14-a653-dcb23f0bfded",
+                    "rows": [
+                        {
+                            "0": "BCA",
+                            "1": "Mr. Das"
+                        },
+                        {
+                            "0": "CSE",
+                            "1": "Mrs. Roy"
+                        },
+                        {
+                            "0": "MCA",
+                            "1": "Mr. Sen"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "dept",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "hod",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 1.071ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "\nSELECT * FROM department;",
+                    "updatable": false,
+                    "fullTableName": "department"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 16,
+                "end": 19,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "1eab11a4-65fa-4f33-82dd-457ffb2077b2"
+                    ]
+                },
+                "currentHeight": 36,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 123
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
+                    "resultId": "1eab11a4-65fa-4f33-82dd-457ffb2077b2",
+                    "rows": [
+                        {
+                            "0": "Arjun",
+                            "1": "MCA",
+                            "2": "Mr. Sen"
+                        },
+                        {
+                            "0": "Arjun",
+                            "1": "MCA",
+                            "2": "Mr. Sen"
+                        },
+                        {
+                            "0": "karan",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Amit",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Priya",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Riya",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Rahul",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Sneha",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Puja",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Ankit",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Payel",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Sourav",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Moumita",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Tina",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Abhishek",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Kajal",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Deb",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Nisha",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Sumit",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Isha",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Amit",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Priya",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Riya",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Rahul",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Sneha",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Puja",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Ankit",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Payel",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Sourav",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Moumita",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Tina",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Abhishek",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Kajal",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Deb",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Nisha",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        },
+                        {
+                            "0": "Sumit",
+                            "1": "BCA",
+                            "2": "Mr. Das"
+                        },
+                        {
+                            "0": "Isha",
+                            "1": "CSE",
+                            "2": "Mrs. Roy"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "dept",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "hod",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 37 records retrieved in 1.96ms"
+                    },
+                    "totalRowCount": 37,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT student2.name, student2.dept, department.hod\nFROM student2\nINNER JOIN department\nON student2.dept = department.dept;",
+                    "updatable": false,
+                    "fullTableName": ""
+                }
+            ]
+        }
+    ]
+}
