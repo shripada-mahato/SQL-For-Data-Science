@@ -21,10 +21,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 3,
+                "lineNumber": 1,
                 "column": 1
             },
-            "firstPositionDeltaTop": -22
+            "firstPositionDeltaTop": 0
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -40,8 +40,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "6fcba00c-9a2e-4478-fd6f-d7066bd22dfa",
-                        "e5b5ea06-23bb-45d2-99f9-dd6a7d48e3bd"
+                        "cb95050c-211b-4728-e925-48aee18e1807"
                     ]
                 },
                 "currentHeight": 117.78125,
@@ -69,8 +68,8 @@
             },
             "data": [
                 {
-                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
-                    "resultId": "6fcba00c-9a2e-4478-fd6f-d7066bd22dfa",
+                    "tabId": "3ca87a2b-cfa5-4379-ac97-70f737b73d83",
+                    "resultId": "cb95050c-211b-4728-e925-48aee18e1807",
                     "rows": [
                         {
                             "0": "CSE",
@@ -129,32 +128,6 @@
                     "sql": "\nSELECT dept, AVG(roll)  as average_roll FROM student2 \nGROUP by dept HAVING average_roll > 65 ORDER BY average_roll DESC",
                     "updatable": false,
                     "fullTableName": ""
-                },
-                {
-                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
-                    "resultId": "e5b5ea06-23bb-45d2-99f9-dd6a7d48e3bd",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 0.772ms"
-                    },
-                    "totalRowCount": 0,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "USE student",
-                    "updatable": false
                 }
             ]
         },
@@ -166,7 +139,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "58402e05-b054-4a14-a653-dcb23f0bfded"
+                        "f29d091e-e4d1-4d8c-f43c-e3ecdad7784b"
                     ]
                 },
                 "currentHeight": 138.4375,
@@ -203,8 +176,8 @@
             },
             "data": [
                 {
-                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
-                    "resultId": "58402e05-b054-4a14-a653-dcb23f0bfded",
+                    "tabId": "3ca87a2b-cfa5-4379-ac97-70f737b73d83",
+                    "resultId": "f29d091e-e4d1-4d8c-f43c-e3ecdad7784b",
                     "rows": [
                         {
                             "0": "BCA",
@@ -278,7 +251,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "1eab11a4-65fa-4f33-82dd-457ffb2077b2"
+                        "a33e6b73-be50-42c6-cfa3-8d1d43d737ef"
                     ]
                 },
                 "currentHeight": 36,
@@ -297,8 +270,8 @@
             },
             "data": [
                 {
-                    "tabId": "bc59361d-9034-48b0-9fe4-f56092a136eb",
-                    "resultId": "1eab11a4-65fa-4f33-82dd-457ffb2077b2",
+                    "tabId": "3ca87a2b-cfa5-4379-ac97-70f737b73d83",
+                    "resultId": "a33e6b73-be50-42c6-cfa3-8d1d43d737ef",
                     "rows": [
                         {
                             "0": "Arjun",

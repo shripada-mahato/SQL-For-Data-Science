@@ -40,8 +40,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "960cdbf5-e5e8-4d8a-e289-767b0a2d9fad",
-                        "8c8cae2b-856f-4728-cf6e-b08d4705b52c"
+                        "5752b9b0-e593-4e98-9ffa-62f85973f8b4"
                     ]
                 },
                 "currentHeight": 36,
@@ -69,8 +68,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "960cdbf5-e5e8-4d8a-e289-767b0a2d9fad",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "5752b9b0-e593-4e98-9ffa-62f85973f8b4",
                     "rows": [
                         {
                             "0": "Abhishek",
@@ -429,32 +428,6 @@
                     "sql": "\nSELECT name, dept, roll,\nCASE\nWHEN roll>= 80 THEN 'excellent'\nWHEN roll>= 70 THEN 'good'\nWHEN roll>= 60 THEN 'average'\nELSE 'low'\nEND AS 'performance' FROM student2 ORDER BY roll DESC",
                     "updatable": false,
                     "fullTableName": ""
-                },
-                {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "8c8cae2b-856f-4728-cf6e-b08d4705b52c",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 0.934ms"
-                    },
-                    "totalRowCount": 0,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "use student",
-                    "updatable": false
                 }
             ]
         },
@@ -466,7 +439,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "3772dd41-bfe5-4cd7-ad74-58326fdcd845"
+                        "86847af2-4bfd-484f-f349-2cc48322d111"
                     ]
                 },
                 "currentHeight": 36,
@@ -494,8 +467,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "3772dd41-bfe5-4cd7-ad74-58326fdcd845",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "86847af2-4bfd-484f-f349-2cc48322d111",
                     "rows": [
                         {
                             "0": "karan",
@@ -582,8 +555,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2a24501a-f576-4755-d141-e80fe56518c3",
-                        "4ab4ab6d-8735-4925-a011-11495ac0373a"
+                        "495e03bf-16b6-4cb1-a989-70dc891a15aa"
                     ]
                 },
                 "currentHeight": 36,
@@ -620,8 +592,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "2a24501a-f576-4755-d141-e80fe56518c3",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "495e03bf-16b6-4cb1-a989-70dc891a15aa",
                     "rows": [
                         {
                             "0": "karan",
@@ -697,32 +669,6 @@
                     "sql": "\n\nSELECT * FROM student2 WHERE roll = 85",
                     "updatable": false,
                     "fullTableName": "student2"
-                },
-                {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "4ab4ab6d-8735-4925-a011-11495ac0373a",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 0.987ms"
-                    },
-                    "totalRowCount": 0,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "UPDATE student2\nSET roll = 85,\n    dept = 'MCA'\nWHERE name = 'karan'",
-                    "updatable": false
                 }
             ]
         },
@@ -734,8 +680,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "c72aecf8-2d9c-468d-dd2a-1bfd7f42f9bb",
-                        "5f51e71c-4e7b-4b67-9c8c-24f191b97c24"
+                        "1e4f6654-d19b-46d1-ccad-c2e4ce8c51b6"
                     ]
                 },
                 "currentHeight": 36,
@@ -763,8 +708,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "c72aecf8-2d9c-468d-dd2a-1bfd7f42f9bb",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "1e4f6654-d19b-46d1-ccad-c2e4ce8c51b6",
                     "rows": [
                         {
                             "0": 45
@@ -802,32 +747,6 @@
                     "sql": "\n\nSELECT COUNT(*) FROM student2",
                     "updatable": false,
                     "fullTableName": ""
-                },
-                {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "5f51e71c-4e7b-4b67-9c8c-24f191b97c24",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 1.787ms"
-                    },
-                    "totalRowCount": 0,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "DELETE FROM student2\nWHERE name = 'rohit'",
-                    "updatable": false
                 }
             ]
         },
@@ -839,8 +758,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "bad16911-b7d6-47d9-ac66-8b6bc3abb692",
-                        "a552233c-5b91-4bde-a4e3-54d1a1dbc739"
+                        "9c9f9109-d028-4aa0-e30b-1f52e791c6b1"
                     ]
                 },
                 "currentHeight": 36,
@@ -868,8 +786,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "bad16911-b7d6-47d9-ac66-8b6bc3abb692",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "9c9f9109-d028-4aa0-e30b-1f52e791c6b1",
                     "rows": [
                         {
                             "0": 37
@@ -907,32 +825,6 @@
                     "sql": "\nSELECT COUNT(*) FROM student2",
                     "updatable": false,
                     "fullTableName": ""
-                },
-                {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "a552233c-5b91-4bde-a4e3-54d1a1dbc739",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 1.397ms"
-                    },
-                    "totalRowCount": 0,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "DELETE FROM student2 WHERE roll <60",
-                    "updatable": false
                 }
             ]
         },
@@ -944,8 +836,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "3b3451eb-2351-447b-a8e9-055dec88cfc3",
-                        "27dbbc67-23c3-43a2-a78c-05e3fa82d101"
+                        "19898d6f-3738-4f6d-a7d6-eedd47520a95"
                     ]
                 },
                 "currentHeight": 351.984375,
@@ -973,8 +864,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "3b3451eb-2351-447b-a8e9-055dec88cfc3",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "19898d6f-3738-4f6d-a7d6-eedd47520a95",
                     "rows": [
                         {
                             "0": "Arjun",
@@ -1230,32 +1121,6 @@
                     "sql": "\n\nSELECT * FROM student2",
                     "updatable": false,
                     "fullTableName": "student2"
-                },
-                {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "27dbbc67-23c3-43a2-a78c-05e3fa82d101",
-                    "rows": [],
-                    "columns": [
-                        {
-                            "title": "*",
-                            "field": "0",
-                            "dataType": {
-                                "type": 0
-                            },
-                            "inPK": false,
-                            "nullable": false,
-                            "autoIncrement": false
-                        }
-                    ],
-                    "executionInfo": {
-                        "text": "OK, 0 records retrieved in 0.977ms"
-                    },
-                    "totalRowCount": 0,
-                    "hasMoreRows": false,
-                    "currentPage": 0,
-                    "index": 0,
-                    "sql": "UPDATE student2\nSET dept = 'CSE'\nWHERE roll > 70 and dept = 'BCA'",
-                    "updatable": false
                 }
             ]
         },
@@ -1267,7 +1132,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2a5ff479-8bfa-4599-fa46-7f151098b334"
+                        "524946cf-35e2-47b1-a5a4-72ae5046ce6a"
                     ]
                 },
                 "currentHeight": 138.4375,
@@ -1295,8 +1160,8 @@
             },
             "data": [
                 {
-                    "tabId": "514f0d0e-d7ba-4dba-863b-6ed65767e654",
-                    "resultId": "2a5ff479-8bfa-4599-fa46-7f151098b334",
+                    "tabId": "f6dd7dc4-a611-4c9b-b49c-73324f4cfe37",
+                    "resultId": "524946cf-35e2-47b1-a5a4-72ae5046ce6a",
                     "rows": [
                         {
                             "0": "CSE",
